@@ -1,0 +1,29 @@
+:root {
+    --orange-500: hsl(25, 97%, 53%);
+    --white: hsl(0, 100%, 100%);
+    --grey-500: hsl(217, 12%, 63%);
+    --grey-900: hsl(213, 19%, 18%);
+    --grey-950: hsl(216, 12%, 8%);
+
+    --font-size-default: 0.938rem;
+}
+
+@font-face {
+    font-family: 'Overpass';
+    src: url('assets/fonts/Overpass-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: var(--font-size-default);
+    background-color: var(--grey-950);
+}
