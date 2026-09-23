@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- In der echten Prüfung: lang="de" -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,72 @@
   <title>Frontend Mentor | Interactive rating component</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <main>
-    <section>
-      <div class="c-card"></div>
-    </section>
+    <!-- IHK-Optimierung: Echtes Formular-Element -->
+    <form id="rating-form" class="c-card">
+      <div class="c-card__start">
+        <div class="c-card__icon-box">
+          <svg class="c-icon" width="17" height="16" aria-hidden="true">
+            <use href="images/sprite.svg#icon-star"></use>
+          </svg>
+        </div>
+        <h1 class="c-card__title">How did we do?</h1>
+        <p class="c-card__text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      </div>
+
+      <fieldset class="c-card__fieldset">
+        <legend class="u-sr-only">Please select a rating from 1 to 5</legend>
+          
+          <div class="c-card__box">
+            <!-- Zustand 1 -->
+            <input type="radio" name="rating" value="1" id="rating-1" class="c-radio-input u-sr-only" required>
+            <label for="rating-1" class="c-circle">1</label>
+
+            <!-- Zustand 2 -->
+            <input type="radio" name="rating" value="2" id="rating-2" class="c-radio-input u-sr-only">
+            <label for="rating-2" class="c-circle">2</label>
+
+            <!-- Zustand 3 -->
+            <input type="radio" name="rating" value="3" id="rating-3" class="c-radio-input u-sr-only">
+            <label for="rating-3" class="c-circle">3</label>
+
+            <!-- Zustand 4 -->
+            <input type="radio" name="rating" value="4" id="rating-4" class="c-radio-input u-sr-only">
+            <label for="rating-4" class="c-circle">4</label>
+
+            <!-- Zustand 5 -->
+            <input type="radio" name="rating" value="5" id="rating-5" class="c-radio-input u-sr-only">
+            <label for="rating-5" class="c-circle">5</label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="c-button">SUBMIT</button>
+    </form>
+
+    <!-- Danke-Bereich außerhalb des Formulars, semantisch als eigene Info-Einheit -->
+    <article id="thanks-card" class="c-thanks" aria-live="polite" hidden>
+      <div class="c-thanks__start">
+        <div class="c-thanks__icon-box">
+          <svg width="162" height="108" aria-hidden="true">
+            <use href="images/sprite.svg#illustration-thank-you"></use>
+          </svg>
+        </div>
+        <div class="c-thanks__rating">You selected <span id="selected-rating" class="c-thanks__rating-value">0</span> out of 5</div>
+      </div>
+      <div class="c-thanks__end">
+        <h2 class="c-thanks__title">Thank you!</h2>
+        <p class="c-thanks__text">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+      </div>
+    </article>
   </main>
 
-  
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">xluxeo</a>.
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
